@@ -13,3 +13,9 @@ variable "aws_region" {
   description = "aws region"
 }
 
+variable "node_ami_id" {
+  type        = string
+  default     = "ami-07f9229b57d1b5049"
+  description = "Optional: explicit AMI ID for worker nodes. Leave empty to use SSM AMI lookup."
+}
+
