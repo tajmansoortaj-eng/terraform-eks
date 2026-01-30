@@ -1,6 +1,7 @@
 variable "kubernetes_version" {
-  default     = 1.33
-  description = "kubernetes version"
+  type        = string
+  default     = "1.27"
+  description = "Kubernetes version (major.minor) used for the EKS control plane and node AMIs"
 }
 
 variable "vpc_cidr" {
