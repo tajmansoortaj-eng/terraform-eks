@@ -1,6 +1,6 @@
 variable "kubernetes_version" {
   type        = string
-  default     = "1.27"
+  default     = "1.33"
   description = "Kubernetes version (major.minor) used for the EKS control plane and node AMIs"
 }
 

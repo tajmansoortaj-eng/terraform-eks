@@ -4,6 +4,10 @@ module "eks" {
   kubernetes_version = var.kubernetes_version
   subnet_ids      = module.vpc.private_subnets
 
+  compute_config = {
+    enabled = true
+  }
+
   enable_irsa = true
 
   tags = {
@@ -18,6 +22,7 @@ module "eks" {
       max_size     = 6
       desired_size = 2
       ami_type               = "AL2_x86_64"
+      use_latest_ami_release_version = false
       instance_types         = ["t3.medium"]
       vpc_security_group_ids = [aws_security_group.all_worker_mgmt.id]
     }
