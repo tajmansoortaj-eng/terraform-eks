@@ -1,6 +1,6 @@
 variable "kubernetes_version" {
   type        = string
-  default     = "1.33"
+  default     = "1.30"
   description = "Kubernetes version (major.minor) used for the EKS control plane and node AMIs"
 }
 
@@ -15,7 +15,7 @@ variable "aws_region" {
 
 variable "node_ami_id" {
   type        = string
-  default     = "ami-07f9229b57d1b5049"
+  default     = "ami-030151c400aafb572"
   description = "Optional: explicit AMI ID for worker nodes. Leave empty to use SSM AMI lookup."
 }
 
